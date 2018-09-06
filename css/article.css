@@ -61,7 +61,6 @@
 
 .article-container
 {
-	height: 500px;
 	background-color: white;
 	border-radius: 15px;
 	margin-top: 25px;
@@ -69,6 +68,7 @@
 	padding-right: 30px;
 	padding-left: 30px;
 	padding-top: 4px;
+	padding-bottom: 30px;
 }
 
 .option-article
@@ -93,4 +93,16 @@
 	padding-left: 15px;
 	line-height: 0px;
 	font-size: 1.5em;
+}
+
+.step-title
+{
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+.article-content
+{
+	margin-top:12px;
 }
