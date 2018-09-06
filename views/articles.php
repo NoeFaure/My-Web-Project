@@ -22,6 +22,15 @@
 			<li class="under-title">Comment rédiger une feuille de style ?</li>
 			<li class="author">Par : Noé Faure</li>
 		</ul>
+		
+		<div class="article-container">
+			<ul class="option-article">
+				<li class="publication-date">Publié le : 6 septembre 2018</li>
+				<li class="option-article-icons"><i class="fas fa-plus"></i></li>
+				<li class="option-article-icons"><i class="fas fa-clipboard-list"></i></li>
+				<li class="option-article-icons"><i class="far fa-heart rose"></i></li>
+			</ul>
+		</div>
 	</div>
   <div class="col-sm-2"></div>
 </div>

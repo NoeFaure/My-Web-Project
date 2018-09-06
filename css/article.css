@@ -58,3 +58,39 @@
 {
 	color: #ff007d;
 }
+
+.article-container
+{
+	height: 500px;
+	background-color: white;
+	border-radius: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 4px;
+}
+
+.option-article
+{
+	list-style-type: none;
+	padding-left: 0px;
+	font-weight: 200;
+	padding-top: 10px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #dedede;
+	height: 45px;
+}
+
+.publication-date
+{
+	float:left;
+}
+
+.option-article-icons
+{
+	float: right;
+	padding-left: 15px;
+	line-height: 0px;
+	font-size: 1.5em;
+}
