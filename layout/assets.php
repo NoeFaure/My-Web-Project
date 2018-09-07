@@ -1,6 +1,7 @@
 <!-- Feuilles de style -->
 <link rel="stylesheet" type="text/css" href="../css/global.css">
 <link rel="stylesheet" type="text/css" href="../css/menubar.css">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
 <link rel="stylesheet" type="text/css" href="../css/article.css">
 	
 <!-- FontAwesome Icons -->
