@@ -23,7 +23,7 @@
 
 .footer li:hover
 {
-	color:#92ccff;
+	color:black;
 }
 
 .participate
@@ -31,7 +31,24 @@
 	float:right !important;
 }
 
+.participate a
+{
+	color:#53aeff;;
+	transition: 0.5s;
+}
+
+.participate a:hover
+{
+	text-decoration: none !important;
+}
+
 .footer-creator-message
 {
 	border-right: 1px solid #dedede;
+	color: grey;
+}
+
+.legal-mention
+{
+	color:#53aeff;;
 }
