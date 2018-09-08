@@ -43,6 +43,11 @@
 			
 			<div class="article-content"><?php get_page_content($id_article, $page); ?></div>
 			
+			<ul class="switch-page-container">
+				<li class="no-previous">Page précédente</li>
+				<li><span class="current-page">Page 1</span> Sur 25</li>
+				<li class="switch-page">Page suivante</li>
+			</ul>
 		</div>
 	</div>
   <div class="col-sm-2"></div>

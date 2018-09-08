@@ -64,11 +64,11 @@
 	background-color: white;
 	border-radius: 15px;
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 	padding-right: 30px;
 	padding-left: 30px;
 	padding-top: 4px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 .option-article
@@ -109,4 +109,46 @@
 	letter-spacing: 1px;
 	line-height: 1.6em;
 	font-size: 1em;
+}
+
+.switch-page-container
+{
+	list-style-type: none;
+	overflow: hidden;
+	margin-top: 50px;
+	border-top: 1px solid #dedede;
+	margin-bottom: 0px;
+	padding-left: 0;
+	padding-top: 15px;
+}
+
+.switch-page-container li
+{
+	float: left;
+	width: 33%;
+	text-align: center;
+	font-weight: 200;
+}
+
+.current-page
+{
+	font-weight: 800;
+}
+
+.switch-page
+{
+	color: #53aeff;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.switch-page:hover
+{
+	color:black;
+}
+
+.switch-page-container .no-previous
+{
+	color: #d6d6d6 !important;
+	cursor: default;
 }
