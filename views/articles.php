@@ -10,8 +10,11 @@
 		$id_article = $_GET['article']; $page = $_GET['page']; 
 	?>
 	
-	<!-- JavaScript dor article-->
+	<!-- JavaScript for article -->
 	<script src="../javascript/articles.js"></script>
+	
+	<!-- Feuille de style -->
+	<link rel="stylesheet" type="text/css" href="../css/article.css">
 	
 	<title>Article - <?php get_title($id_article); ?></title>
 </head>
