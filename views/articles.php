@@ -2,13 +2,15 @@
 <html>
     
 <head>
-	<title>Article - </title>
-    
-	<?php require '../layout/assets.php'; ?>
-	<?php require '../server/functions.php'; ?>
-	<?php require_once '../server/db.php'; ?>
-	<?php $id_article = 1; $page = 1; ?>
-
+	<?php 
+		require '../layout/assets.php';
+		require_once '../server/db.php';
+		require '../server/functions_article.php';
+		check_geter_article();
+		$id_article = $_GET['article']; $page = $_GET['page']; 
+	?>
+	
+	<title>Article - <?php get_title($id_article); ?></title>
 </head>
     
 <body>
@@ -45,7 +47,7 @@
 			
 			<ul class="switch-page-container">
 				<li class="no-previous">Page précédente</li>
-				<li><span class="current-page">Page 1</span> Sur 25</li>
+				<li><span class="current-page">Page <?php echo($page); ?></span> sur <?php get_number_all_page($id_article); ?></li>
 				<li class="switch-page">Page suivante</li>
 			</ul>
 		</div>

@@ -128,3 +128,49 @@ function get_page_content($id_article, $page_number)
 	
 	echo($content[0]);
 }
+
+function get_number_all_page($id_article)
+{
+	global $pdo;
+	
+	$req = $pdo->prepare('SELECT COUNT(*) FROM pages WHERE id_article = ?');
+	$req->execute([$id_article]);
+	$nb_pages = $req->fetch();
+	
+	echo($nb_pages[0]);
+}
+
+function check_geter_article()
+{
+	$pass = false;
+	
+	if (isset($_GET['article']) AND isset($_GET['page']))
+	{
+		global $pdo;
+		
+		//Force conversion in integer
+		$_GET['article'] = (int) $_GET['article'];
+		$_GET['page'] = (int) $_GET['page'];
+		
+		//check presence in database
+		$req = $pdo->prepare('SELECT COUNT(*) FROM articles WHERE id = ?');
+		$req->execute([$_GET['article']]);
+		$check_article = $req->fetch();
+		
+		$req = $pdo->prepare('SELECT COUNT(*) FROM pages WHERE id_article = ? AND page_number = ?');
+		$req->execute([$_GET['article'],$_GET['page']]);
+		$check_page = $req->fetch();
+		
+		if ($check_page[0] != 0 AND $check_article[0] != 0)
+		{
+			$pass = true;
+		}
+	}
+	
+	//Pass or not
+	if ($pass == false)
+	{
+		$_GET['article'] = 1;
+		$_GET['page'] = 1;
+	}
+}
