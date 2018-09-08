@@ -10,6 +10,9 @@
 		$id_article = $_GET['article']; $page = $_GET['page']; 
 	?>
 	
+	<!-- JavaScript dor article-->
+	<script src="../javascript/articles.js"></script>
+	
 	<title>Article - <?php get_title($id_article); ?></title>
 </head>
     
@@ -46,9 +49,13 @@
 			<div class="article-content"><?php get_page_content($id_article, $page); ?></div>
 			
 			<ul class="switch-page-container">
-				<li class="no-previous">Page précédente</li>
-				<li><span class="current-page">Page <?php echo($page); ?></span> sur <?php get_number_all_page($id_article); ?></li>
-				<li class="switch-page">Page suivante</li>
+				<li><a id="previous_page" class="switch-page" href="<?php previous_page(); ?>">Page précédente</a></li>
+				<li>
+					<span class="current-page">
+						Page <span id="current_page"><?php echo($page); ?></span>
+					</span> sur <span id="total_page"><?php get_number_all_page($id_article); ?></span>
+				</li>
+				<li><a id="next_page" class="switch-page" href="<?php next_page(); ?>">Page suivante</a></li>
 			</ul>
 		</div>
 	</div>

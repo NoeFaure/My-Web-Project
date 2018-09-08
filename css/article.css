@@ -147,8 +147,9 @@
 	color:black;
 }
 
-.switch-page-container .no-previous
+.switch-page-container .no-page
 {
 	color: #d6d6d6 !important;
+	text-decoration: none !important;
 	cursor: default;
 }

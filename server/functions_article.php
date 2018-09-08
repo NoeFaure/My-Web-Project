@@ -174,3 +174,53 @@ function check_geter_article()
 		$_GET['page'] = 1;
 	}
 }
+
+function next_page()
+{
+	$current_page = $_GET['page'];
+	$next_page = $current_page + 1;
+	
+	global $pdo;
+	
+	//check presence in database
+	$req = $pdo->prepare('SELECT COUNT(*) FROM pages WHERE id_article = ? AND page_number = ?');
+	$req->execute([$_GET['article'], $next_page]);
+	$check_page = $req->fetch();
+	
+	if($check_page[0] != 0)
+	{
+		echo("articles.php?article=" . $_GET['article'] . "&page=" . $next_page);
+	}
+	
+	else
+	{
+		echo("#");
+	}
+	
+	
+}
+
+function previous_page()
+{
+	$current_page = $_GET['page'];
+	$previous_page = $current_page - 1;
+	
+	global $pdo;
+	
+	//check presence in database
+	$req = $pdo->prepare('SELECT COUNT(*) FROM pages WHERE id_article = ? AND page_number = ?');
+	$req->execute([$_GET['article'], $previous_page]);
+	$check_page = $req->fetch();
+	
+	if($check_page[0] != 0)
+	{
+		echo("articles.php?article=" . $_GET['article'] . "&page=" . $previous_page);
+	}
+	
+	else
+	{
+		echo("");
+	}
+	
+	
+}
