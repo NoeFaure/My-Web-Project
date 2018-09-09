@@ -1,6 +1,5 @@
 .login-container
 {
-	height: 300px;
 	background-color: white;
 	margin-top: 20%;
 	border-radius: 15px;
@@ -41,21 +40,25 @@
 	margin-left: 25%;
 	margin-right: 25%;
 	width: 50%;
-	border: 1px solid #f0efe7;
-	padding: 7px;
-	border-radius: 5px;
-	color: grey;
-	cursor: pointer;
-	outline: none;
-	transition: 0.5s;
 }
 
-.login-submit:hover
+.login-header
 {
-	border: 1px solid #92ccff;
+	font-size: 1.8em;
+	text-align: center;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	border-bottom: 1px dashed #dedede;
 }
 
-.login-submit:focus
+.login-alert
 {
-	border: 1px solid #92ccff;
+	background-color: #92ccff;
+	border-color: #ffffff;
+	color: white;
+}
+
+.login-alert ul
+{
+	padding: 10px 0px 0px 20px;
 }

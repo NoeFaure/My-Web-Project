@@ -23,11 +23,12 @@
 		
   <div class="col-sm-4">
 		<form class="login-container">
+			<div class="login-header">Espace membre</div>
 			<label>Nom d'utilisateur (e-mail)</label>
 			<input class="login-input" type="text" required autocomplete="off" autofocus="on">
 			<label class="label-password">Mot de passe</label>
 			<input class="login-input login-password" type="password" required autocomplete="off">
-			<input class="login-submit" type="submit" value="Se connecter">
+			<input class="button-1 login-submit" type="submit" value="Se connecter">
 		</form>
 	</div>
 		

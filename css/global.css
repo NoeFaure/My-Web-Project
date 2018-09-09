@@ -3,3 +3,30 @@ body
 	background-color: #f0efe7 !important;
 	font-family: Montserrat !important;
 }
+
+.button-1
+{
+	border: 1px solid #f0efe7;
+	padding: 7px;
+	border-radius: 5px;
+	color: grey;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+}
+
+.button-1:hover
+{
+	border: 1px solid #92ccff;
+}
+
+.button-1:focus
+{
+	border: 1px solid #92ccff;
+}
+
+.button-1:active
+{
+	background-color: #92ccff;
+	color: white;
+}
