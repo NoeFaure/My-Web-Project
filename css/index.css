@@ -1,0 +1,33 @@
+.article-container
+{
+	height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-right: 2px solid #ffffff;
+}
+
+.article-category-container
+{
+	background-color: white;
+	height: 45px;
+}
+
+.article-bullet
+{
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 11px;
+	margin-left: 14px;
+	background-color: #53aeff;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+
+.main-presentation
+{
+	height: 500px;
+	background: repeating-linear-gradient(45deg, #464646, #464646 10px, #4c4c4c 10px, #4c4c4c 20px);
+}
