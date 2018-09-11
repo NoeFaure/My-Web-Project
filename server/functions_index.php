@@ -35,9 +35,9 @@ function browse_article()
 						<div class="article-info-container">
 							<ul class="article-main-info-container">
 								<li class="article-title">' . $metadata['title'] .'</li>
-								<li class="article-option rose" data-toggle="tooltip" title="'. $metadata['nb_like'] .' likes">&nbsp; '. $metadata['nb_vues'] .' &nbsp;<i class="fas fa-heart"></i></li>
-								<li class="article-option" data-toggle="tooltip" title="' . $metadata['nb_vues'] .' vues">&nbsp; ' . $metadata['nb_like'] .' &nbsp;<i class="far fa-eye"></i></li>
-								<li class="article-option" data-toggle="tooltip" title="7 follows">7 &nbsp;<i class="fas fa-share"></i>
+								<li class="article-option rose" data-toggle="tooltip" title="'. $metadata['nb_like'] .' likes">&nbsp; '. $metadata['nb_like'] .' &nbsp;<i class="fas fa-heart"></i></li>
+								<li class="article-option" data-toggle="tooltip" title="' . $metadata['nb_vues'] .' vues">&nbsp; ' . $metadata['nb_vues'] .' &nbsp;<i class="far fa-eye"></i></li>
+								<li class="article-option" data-toggle="tooltip" title="' . $metadata['nb_share'] .' follows">' . $metadata['nb_share'] .' &nbsp;<i class="fas fa-share"></i>
 							</ul>
 							<div class="article-under-title">' . $metadata['under_title'] .'</div>
 							<div class="article-extract">' . $extract_page[0] . '</div>
