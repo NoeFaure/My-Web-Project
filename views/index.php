@@ -5,8 +5,7 @@
 		require '../layout/assets.php';
 		require_once '../server/db.php';
 		require '../server/functions_article.php';
-		check_geter_article();
-		$id_article = $_GET['article']; $page = $_GET['page']; 
+		require '../server/functions_index.php';
 	?>
 	
 	<title>WriteIt</title>
@@ -14,22 +13,22 @@
 	<!-- Feuille de style -->
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
 	
+	<!-- JavaScript for article -->
+	<script src="../javascript/index.js"></script>
+	
 </head>
 
 <body>
 <?php require '../layout/menubar.php'; ?>
 
 <div class="container-fluid">
-	<div class="row main-presentation">
-	</div>
-	<div class="row article-category-container">
-		<div class="article-bullet">Informatique</div>
-	</div>
 	<div class="row">
-  	<div class="col-sm-3 article-container"></div>
-		<div class="col-sm-3"></div>
-		<div class="col-sm-3"></div>
-		<div class="col-sm-3"></div>
+  	<div class="col-sm-10 article-main-container">
+			
+			<?php browse_article(); ?>
+			
+		</div>
+		<div class="col-sm-2"></div>
 	</div>
 </div>
 	

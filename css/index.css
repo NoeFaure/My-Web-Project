@@ -1,33 +1,111 @@
+.article-main-container
+{
+	min-height: 800px;
+}
+
 .article-container
 {
-	height: 400px;
+	height: 250px;
+	background-color: white;
+	margin-top: 25px;
+	margin-left: 50px;
+	margin-right: 25px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 12px;
+	border-bottom: 3px solid white;
+	display: flex;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.article-container:hover 
+{
+	border-bottom: 3px solid #99d2ff;
+}
+
+.article-picture
+{
 	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/1.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border-right: 2px solid #ffffff;
+	
+	height: 100%;
+	width: 220px;
+	min-width: 220px;
 }
 
-.article-category-container
+.article-title
 {
-	background-color: white;
-	height: 45px;
+	float: left;
 }
 
-.article-bullet
+.article-main-info-container
 {
+	color: #383838;
+	font-weight: 500;
+	font-size: 1.5em;
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+	width: 100%;
+  height: 35px;
+}
+
+.article-option
+{
+	font-size: 0.5em;
+	float: right;
+}
+
+.article-under-title
+{
+	color: #616161;
+  margin-top: 3px;
+	padding-left: 1px;
+}
+
+.article-info-container
+{
+	margin-left:15px;
+	height:100%;
+}
+
+.article-category
+{
+	position: absolute;
+	margin-top: 17px;
+	margin-left: -40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	background-color: #99d2ff;
 	color: white;
-	margin-top: 10px;
-	margin-bottom: 11px;
-	margin-left: 14px;
-	background-color: #53aeff;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 5px;
 }
 
-.main-presentation
+.article-extract
 {
-	height: 500px;
-	background: repeating-linear-gradient(45deg, #464646, #464646 10px, #4c4c4c 10px, #4c4c4c 20px);
+	font-weight: 200;
+	letter-spacing: 1px;
+	font-size: 0.95em;
+	text-align: justify;
+	margin-top: 21px;
+	height: 137px;
+	overflow: hidden;
+	padding-left: 30px;
+	padding-right: 10px;
+	color: grey;
+}
+
+.rose
+{
+	color: #ff007d;
+}
+
+.article-clickable:hover
+{
+	text-decoration: none;
 }
