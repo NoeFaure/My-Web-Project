@@ -28,7 +28,7 @@
   <div class="col-sm-2"></div>
 		
   <div class="col-sm-8">
-		<ul class="information-container">
+		<ul class="information-container" <?php print_picture($id_article) ?>>
 			<li class="information-option-icons">
 				<?php get_number_of_vue($id_article); ?> <i class="far fa-eye"></i>
 				&nbsp; <?php get_number_of_like($id_article); ?> <i class="fas fa-heart rose"></i>
