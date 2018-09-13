@@ -6,6 +6,7 @@
 		require_once '../server/db.php';
 		require '../server/functions_article.php';
 		require '../server/functions_index.php';
+		require_once '../server/session.php';
 	?>
 	
 	<title>WriteIt</title>

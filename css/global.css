@@ -30,3 +30,18 @@ body
 	background-color: #92ccff;
 	color: white;
 }
+
+.flash-alert
+{
+	background-color: #92ccff !important;
+	border-color: #90bfe8 !important;
+	color: white !important;
+	
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+.flash-alert ul
+{
+	padding: 10px 0px 0px 20px !important;
+}

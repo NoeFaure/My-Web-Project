@@ -6,6 +6,7 @@
 		require '../layout/assets.php';
 		require_once '../server/db.php';
 		require '../server/register.php';
+		require_once '../server/session.php';
 	?>
 	
 	<!-- Feuille de style -->
@@ -28,7 +29,7 @@
 			
 			<?php if(!empty($errors)): ?>
 			
-				<div class="alert alert-info login-alert" role="alert">
+				<div class="alert alert-info flash-alert" role="alert">
   				<strong>Vérifiez vos paramètres</strong>
 						<ul>
 							<?php foreach($errors as $error): ?>

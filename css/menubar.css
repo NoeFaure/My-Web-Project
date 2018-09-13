@@ -61,22 +61,36 @@
 {
 	color: grey;
 	line-height: 29px;
-	font-size: 0.9em;
+	font-size: 0.85em;
 	cursor: pointer;
 	padding-left: 10px;
 	padding-right: 10px;
 	float: left;
 	transition: 0.5s;
 	border-bottom: 1px solid white;
-	border-left: 1px solid #f3f3f3;
-	border-right: 1px solid #f3f3f3;
 }
 
 .admin-menubar li:hover
 {
 	background-color: white;
 	border-bottom: 1px solid #92ccff;
-	border-left: 1px solid whitesmoke;
-	border-right: 1px solid whitesmoke;
 	color: black;
+}
+
+.admin-sticker
+{
+	background-color: #99d2ff;
+	margin-left: -31px;
+	color: white !important;
+	width: 123px;
+	text-align: center;
+	cursor: default !important;
+	border-right: 1px solid white;
+}
+
+.admin-sticker:hover
+{
+	background-color: #99d2ff !important;
+	border-bottom: 1px solid white !important;
+	color: white !important;
 }
