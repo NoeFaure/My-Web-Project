@@ -30,6 +30,7 @@
 	outline: none;
 	transition: 0.5s;
 	padding-left: 15px;
+	border-left: 3px solid #99d2ff;
 }
 
 .create-article-input:focus
@@ -63,6 +64,7 @@
 	transition: 0.5s;
 	padding-left: 20px;
 	padding-right: 20px;
+	background-color: #fbfbfb;
 	
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -79,5 +81,86 @@
 	width:100%;
 	height:1px;
 	border-bottom: 1px dashed #dedede;
+	margin-bottom: 30px;
 	
+}
+
+.create-article-select
+{
+	width: 100%;
+	border: 1px solid #f0efe7;
+	color: grey;
+	background-color: #fbfbfb;
+	margin-bottom: 30px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.create-article-text-area
+{
+	width: 100%;
+	border: 1px solid #f0efe7;
+	height: 470px;
+	
+	letter-spacing: 1px;
+	line-height: 1.6em;
+	font-size: 1em;
+	outline: none;
+	margin-bottom: 30px;
+	
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.create-article-text-area:focus
+{
+	border: 1px solid #92ccff;
+}
+
+.create-article-submit
+{
+	border: 1px solid #92ccff;
+	padding: 7px;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #92ccff;
+	width: 100%;
+	
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.create-article-submit:hover
+{
+	background-color: #579bd8;
+	border: 1px solid #579bd8;
+}
+
+.create-article-page-number
+{
+	text-align: center;
+	font-weight: 800;
+	font-size: 1.2em;
+}
+
+.create-article-page-delete
+{
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	color: #99d2ff;
+	transition:0.5s;
+}
+
+.create-article-page-delete:hover
+{
+	text-decoration:underline;
+	color: #579bd8;
 }
