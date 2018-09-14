@@ -19,14 +19,14 @@
 	transition: 0.5s;
 }
 
-.login-password
-{
-	font-size: 1.7em;
-}
-
 .login-input:focus
 {
 	border-bottom: 3px solid #92ccff;
+}
+
+.login-password
+{
+	font-size: 1.7em;
 }
 
 .label-password

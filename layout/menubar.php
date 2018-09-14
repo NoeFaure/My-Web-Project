@@ -8,7 +8,7 @@
 <?php if(isset($_SESSION['user'])): ?>
 	<ul class="admin-menubar">
 		<li class="admin-sticker">ADMIN</li>
-		<a><li>Rédiger un article</li></a>
+		<a href="create_article.php"><li>Rédiger un article</li></a>
 		<a href="create_account.php"><li>Créer un compte</li></a>
 		<a href="../server/logout.php"><li>Se déconnecter</li></a>
 	</ul>
