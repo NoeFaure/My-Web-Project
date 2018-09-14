@@ -1,13 +1,16 @@
+<?php 
+	require '../layout/assets.php';
+	require_once '../server/db.php';
+	require '../server/register.php';
+	require_once '../server/session.php';
+?>
+
+<?php if(isset($_SESSION['user'])){ ?>
+
 <!DOCTYPE html>
 <html>
     
 <head>
-	<?php 
-		require '../layout/assets.php';
-		require_once '../server/db.php';
-		require '../server/register.php';
-		require_once '../server/session.php';
-	?>
 	
 	<!-- Feuille de style -->
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
@@ -68,3 +71,11 @@
 </body>
     
 </html>
+
+<?php }
+else
+{
+	header('Location: login.php');
+	exit();
+}
+?>
