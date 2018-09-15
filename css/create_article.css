@@ -15,7 +15,6 @@
 	text-align: left;
 	color: grey;
 	font-weight: 200;
-	width: 100%;
 	margin-bottom: 11px;
 }
 
@@ -28,14 +27,15 @@
 	margin-bottom: 30px;
 	padding: 5px;
 	outline: none;
-	transition: 0.5s;
+	transition: 0.3s;
 	padding-left: 15px;
 	border-left: 3px solid #99d2ff;
 }
 
 .create-article-input:focus
 {
-	border-bottom: 1px solid #92ccff;
+	border: 1px solid #92ccff;
+	border-left: 3px solid #92ccff;
 }
 
 .create-article-title-header
@@ -131,10 +131,11 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: #92ccff;
+	text-align: center;
 	width: 100%;
 	
 	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 
 .create-article-submit:hover
@@ -163,4 +164,34 @@
 {
 	text-decoration:underline;
 	color: #579bd8;
+}
+
+.create-article-sticker
+{
+	border-radius: 8px;
+	font-size: 0.7em;
+	margin-left: auto;
+	background-color: #6eb5ec;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	margin-top: 7px;
+	margin-bottom: 15px;
+}
+
+.create-article-upload-info
+{
+	height: 20px;
+	margin-top: 18px;
+	margin-left: 20px;
+	font-weight: lighter;
+	color: grey;
+}
+
+.plus-icon
+{
+	color: #d6d6d6;
+	line-height: 38px;
+	margin-right: 10px;
 }
