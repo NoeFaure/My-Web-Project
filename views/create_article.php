@@ -55,14 +55,14 @@
 					
 					<div class="create-article-create-page-container">
 						<div class="create-article-page-number">Page <span class="page-number">1</span> <span style="font-weight:200;">sur</span> <span style="font-weight:200;" class="page-number-length">1</span></div>
-						<a><div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div></a>
+						<div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div>
 				
 						<label class="create-article-label">Titre de la page</label>
 						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page">
 						
 						<textarea rows="4" cols="50" class="create-article-text-area"></textarea>
 						
-						<label for="button-add-page" class="create-article-label-file"><input type="button" id="button-add-page" style="display:none;"><i class="fas fa-file-medical"></i> &nbsp; Ajouter une page</label>
+						<label for="button-add-page" class="create-article-label-file"><input type="button" id="button-add-page" style="display:none;"><i class="fas fa-plus"></i> &nbsp; Ajouter une nouvelle page</label>
 						<input type="button" id="button-add-page" style="display:none;">
 						
 						<div class="create-article-line-spacer"></div>
