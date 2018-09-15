@@ -54,7 +54,7 @@
 					<div class="create-article-line-spacer"></div>
 					
 					<div class="create-article-create-page-container">
-						<div class="create-article-page-number">Page 1</div>
+						<div class="create-article-page-number">Page <span class="page-number">1</span> <span style="font-weight:200;">sur</span> <span style="font-weight:200;" class="page-number-length">1</span></div>
 						<a><div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div></a>
 				
 						<label class="create-article-label">Titre de la page</label>
