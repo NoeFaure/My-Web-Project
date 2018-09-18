@@ -33,11 +33,16 @@ function browse_article()
 			$req2->execute([$metadata['id']]);
 			$extract_page = $req2->fetch();
 			$style = create_picture($metadata['id']);
+			
+			//Category
+			$req3 = $pdo->prepare('SELECT name FROM category WHERE id = ?');
+			$req3->execute([$metadata['id_category']]);
+			$category = $req3->fetch();
 
 			$extract_page[0] = substr ($extract_page[0], 0, 700);
 
 			echo '<a class="article-clickable" href="articles.php?article='. $metadata['id'] .'&page=1"><div class="article-container">
-							<div class="article-category">' . $metadata['category'] .'</div>
+							<div class="article-category">' . $category[0] .'</div>
 								<div class="article-picture" '. $style.'></div>
 									<div class="article-info-container">
 										<ul class="article-main-info-container">

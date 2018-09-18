@@ -57,7 +57,7 @@
 						<div class="create-article-page-number">Page <span class="page-number">1</span> <span style="font-weight:200;">sur</span> <span style="font-weight:200;" class="page-number-length">1</span></div>
 						<div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div>
 				
-						<label class="create-article-label">Titre de la page</label>
+						<div style="display:flex;"><label class="create-article-label">Titre de la page</label><span class="create-article-sticker">Champ facultatif</span></div>
 						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page">
 						
 						<textarea rows="4" cols="50" class="create-article-text-area"></textarea>
