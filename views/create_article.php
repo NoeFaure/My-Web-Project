@@ -28,28 +28,25 @@
 		<div class="col-sm-8">
 			<div class="create-article-container">
 				<div class="create-article-title-header">Rédiger un article</div>
-				<form action="#" method="post">
+				<form action="../server/create_article_post.php" method="post">
 					<div style="display:flex;"><label class="create-article-label">Titre de l'article</label><span class="create-article-sticker">Champ obligatoire</span></div>
-					<input class="create-article-input" type="text" placeholder="Entrez un titre">
+					<input class="create-article-input" name="title" type="text" placeholder="Entrez un titre">
 					
 					<div style="display:flex;"><label class="create-article-label">Sous-titre (phrase d'accroche)</label><span class="create-article-sticker">Champ obligatoire</span></div>
-					<input class="create-article-input" type="text" placeholder="Entrez un sous-titre">
-					
-					<div style="display:flex;"><label class="create-article-label">Auteur</label><span class="create-article-sticker">Champ obligatoire</span></div>
-					<input class="create-article-input" type="text" placeholder="Entrez un nom d'auteur">
+					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre">
 					
 					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">0 fichier, Max : 2Mo (.jpeg)</span></div>
 					<input id="file" class="create-article-upload" type="file"><br>
 					
 					<div style="display:flex;"><label class="create-article-label">Sélectionner une catégorie</label><span class="create-article-sticker">Remplissez un des deux champs</span></div>
-					<select class="create-article-select">
+					<select class="create-article-select" name="category">
+						<option selected value>Pas de catégorie correspondante</option>
 						<option value="Droit">Droit</option>
 						<option value="Informatique">Informatique</option>
 					</select>
 					
 					<div style="display:flex;"><label class="create-article-label">Ou ajouter une catégorie</label></div>
-					<div style="display:flex;"><i class="fas fa-plus plus-icon"></i><input class="create-article-input" type="text" placeholder="Entrez le nom d'une nouvelle catégorie"></div>
-					
+					<div style="display:flex;"><i class="fas fa-plus plus-icon"></i><input class="create-article-input" type="text" placeholder="Entrez le nom d'une nouvelle catégorie" name="new_category"></div>
 					
 					<div class="create-article-line-spacer"></div>
 					
@@ -60,7 +57,7 @@
 						<div style="display:flex;"><label class="create-article-label">Titre de la page</label><span class="create-article-sticker">Champ facultatif</span></div>
 						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page">
 						
-						<textarea rows="4" cols="50" class="create-article-text-area"></textarea>
+						<textarea rows="4" cols="50" class="create-article-text-area" name="page_content[]"></textarea>
 						
 						<label for="button-add-page" class="create-article-label-file"><input type="button" id="button-add-page" style="display:none;"><i class="fas fa-plus"></i> &nbsp; Ajouter une nouvelle page</label>
 						<input type="button" id="button-add-page" style="display:none;">
