@@ -8,21 +8,21 @@ global $pdo;
 $errors = array();
 
 // Check Upload file
-$maxsize= 2097152;
+$maxsize= 8388608;
 $extensions_valides = array('jpg');
 $extension_upload = strtolower(  substr(  strrchr($_FILES['picture']['name'], '.')  ,1)  );
 
-if ($_FILES['icone']['error'] > 0)
+if ($_FILES['picture']['error'] > 0)
 {
 	$errors[] = "Erreur lors du transfert de l'image";
 }
-if ($_FILES['icone']['size'] > $maxsize)
+if ($_FILES['picture']['size'] > $maxsize)
 {
 	$errors[] = "Le fichier est trop lourd";
 }
 if (in_array($extension_upload,$extensions_valides))
 {
-	// L'extension is ok
+	// Extension is ok
 }
 else
 {
@@ -30,7 +30,7 @@ else
 }
 	
 //Check variable existance
-if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['category']) || !empty($_POST['new_category'])) && !empty($_POST['page_content']) && empty($errors))
+if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['category']) || !empty($_POST['new_category'])) && !empty($_POST['page_content'][0]) && empty($errors))
 {
 	$title = $_POST['title'];
 	$under_title = $_POST['under_title'];
@@ -52,12 +52,10 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 		$id_category = $req->fetch();
 		$id_category = $id_category[0];
 		
-		echo("c'est pas ok");
 	}
 	// Category already exist
 	else if (empty($_POST['new_category']))
 	{
-		echo("c est ok");
 		$category = $_POST['category'];
 		
 		//Look for the matching category
@@ -97,10 +95,20 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 		
 		// ---------- Upload picture ----------
 		$path = "../images/{$id_article[0]}.{$extension_upload}";
-		$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$nom);
+		$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$path);
 		if (!$resultat)
 		{
 			$errors[] = "Erreur lors du transfert du fichier";
+		}
+		
+		// ---------- Add page ----------
+		$index_page = 0;
+		foreach($_POST['page_title'] as $page_content)
+		{
+			$req = $pdo->prepare('INSERT INTO pages (id_article, title, content, page_number) VALUES (?,?,?,?)');
+			$req->execute([$id_article[0], $_POST['page_title'][$index_page], $_POST['page_content'][$index_page], $index_page + 1]);
+			
+			$index_page = $index_page + 1;
 		}
 		
 		header('Location: ../views/index.php');
@@ -114,4 +122,5 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 else
 {
 	echo('champ(s) manquant(s)');
+	var_dump($errors);
 }

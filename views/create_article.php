@@ -36,8 +36,8 @@
 					<div style="display:flex;"><label class="create-article-label">Sous-titre (phrase d'accroche)</label><span class="create-article-sticker">Champ obligatoire</span></div>
 					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre" autocomplete="off">
 					
-					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">Max : 2Mo (.jpg)</span></div>
-					<input type="hidden" name="MAX_FILE_SIZE" value="2097152"/>
+					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">Max : 8Mo (.jpg)</span></div>
+					<input type="hidden" name="MAX_FILE_SIZE" value="8388608"/>
 					<input id="file" class="create-article-upload" name="picture" type="file"><br>
 					
 					<div style="display:flex;"><label class="create-article-label">Sélectionner une catégorie</label><span class="create-article-sticker">Remplissez un des deux champs</span></div>
@@ -56,7 +56,7 @@
 						<div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div>
 				
 						<div style="display:flex;"><label class="create-article-label">Titre de la page</label><span class="create-article-sticker">Champ facultatif</span></div>
-						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page" autocomplete="off">
+						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page" autocomplete="off" name="page_title[]">
 						
 						<textarea rows="4" cols="50" class="create-article-text-area" name="page_content[]"></textarea>
 						
