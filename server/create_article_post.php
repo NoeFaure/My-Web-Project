@@ -6,15 +6,37 @@ require_once '../server/session.php';
 global $pdo;
 
 $errors = array();
+
+// Check Upload file
+$maxsize= 2097152;
+$extensions_valides = array('jpg');
+$extension_upload = strtolower(  substr(  strrchr($_FILES['picture']['name'], '.')  ,1)  );
+
+if ($_FILES['icone']['error'] > 0)
+{
+	$errors[] = "Erreur lors du transfert de l'image";
+}
+if ($_FILES['icone']['size'] > $maxsize)
+{
+	$errors[] = "Le fichier est trop lourd";
+}
+if (in_array($extension_upload,$extensions_valides))
+{
+	// L'extension is ok
+}
+else
+{
+	$errors[] = "Le type d'image utilisé n'est pas pris en charge";
+}
 	
 //Check variable existance
-if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['category']) || !empty($_POST['new_category'])) && !empty($_POST['page_content']))
+if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['category']) || !empty($_POST['new_category'])) && !empty($_POST['page_content']) && empty($errors))
 {
 	$title = $_POST['title'];
 	$under_title = $_POST['under_title'];
 	$page_content_array = $_POST['page_content'];
 	
-	//Create category field
+	// ---------- Create category field ----------
 	// Category does not exist yet
 	if(isset($_POST['category']) && !empty($_POST['new_category']))
 	{
@@ -68,6 +90,18 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 		// Create article
 		$req = $pdo->prepare('INSERT INTO articles (title, under_title, id_author, publication_date, id_category) VALUES (?,?,?,?,?)');
 		$req->execute([$title, $under_title, $_SESSION['user'][0], $today, $id_category]);
+		
+		$req2 = $pdo->prepare('SELECT id FROM articles WHERE id=LAST_INSERT_ID()');
+		$req2->execute();
+		$id_article = $req2->fetch();
+		
+		// ---------- Upload picture ----------
+		$path = "../images/{$id_article[0]}.{$extension_upload}";
+		$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$nom);
+		if (!$resultat)
+		{
+			$errors[] = "Erreur lors du transfert du fichier";
+		}
 		
 		header('Location: ../views/index.php');
 	}

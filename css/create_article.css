@@ -98,6 +98,12 @@
 	height: 40px;
 }
 
+.create-article-select:focus
+{
+	outline: none;
+	border-color: #99d2ff;
+}
+
 .create-article-text-area
 {
 	width: 100%;

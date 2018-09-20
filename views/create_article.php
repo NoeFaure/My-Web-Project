@@ -29,15 +29,16 @@
 		<div class="col-sm-8">
 			<div class="create-article-container">
 				<div class="create-article-title-header">Rédiger un article</div>
-				<form action="../server/create_article_post.php" method="post">
+				<form action="../server/create_article_post.php" method="post" enctype="multipart/form-data">
 					<div style="display:flex;"><label class="create-article-label">Titre de l'article</label><span class="create-article-sticker">Champ obligatoire</span></div>
 					<input class="create-article-input" name="title" type="text" placeholder="Entrez un titre" autocomplete="off">
 					
 					<div style="display:flex;"><label class="create-article-label">Sous-titre (phrase d'accroche)</label><span class="create-article-sticker">Champ obligatoire</span></div>
 					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre" autocomplete="off">
 					
-					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">0 fichier, Max : 2Mo (.jpeg)</span></div>
-					<input id="file" class="create-article-upload" type="file"><br>
+					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">Max : 2Mo (.jpg)</span></div>
+					<input type="hidden" name="MAX_FILE_SIZE" value="2097152"/>
+					<input id="file" class="create-article-upload" name="picture" type="file"><br>
 					
 					<div style="display:flex;"><label class="create-article-label">Sélectionner une catégorie</label><span class="create-article-sticker">Remplissez un des deux champs</span></div>
 					<select class="create-article-select" name="category">
