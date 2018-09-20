@@ -2,6 +2,7 @@
 	require '../layout/assets.php';
 	require_once '../server/db.php';
 	require_once '../server/session.php';
+	require_once '../server/functions_create_articles.php';
 ?>
 
 <?php if(isset($_SESSION['user'])){?>
@@ -41,8 +42,7 @@
 					<div style="display:flex;"><label class="create-article-label">Sélectionner une catégorie</label><span class="create-article-sticker">Remplissez un des deux champs</span></div>
 					<select class="create-article-select" name="category">
 						<option selected value>Pas de catégorie correspondante</option>
-						<option value="Droit">Droit</option>
-						<option value="Informatique">Informatique</option>
+						<?php browse_categories(); ?>
 					</select>
 					
 					<div style="display:flex;"><label class="create-article-label">Ou ajouter une catégorie</label></div>
