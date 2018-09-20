@@ -30,10 +30,10 @@
 				<div class="create-article-title-header">Rédiger un article</div>
 				<form action="../server/create_article_post.php" method="post">
 					<div style="display:flex;"><label class="create-article-label">Titre de l'article</label><span class="create-article-sticker">Champ obligatoire</span></div>
-					<input class="create-article-input" name="title" type="text" placeholder="Entrez un titre">
+					<input class="create-article-input" name="title" type="text" placeholder="Entrez un titre" autocomplete="off">
 					
 					<div style="display:flex;"><label class="create-article-label">Sous-titre (phrase d'accroche)</label><span class="create-article-sticker">Champ obligatoire</span></div>
-					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre">
+					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre" autocomplete="off">
 					
 					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">0 fichier, Max : 2Mo (.jpeg)</span></div>
 					<input id="file" class="create-article-upload" type="file"><br>
@@ -46,7 +46,7 @@
 					</select>
 					
 					<div style="display:flex;"><label class="create-article-label">Ou ajouter une catégorie</label></div>
-					<div style="display:flex;"><i class="fas fa-plus plus-icon"></i><input class="create-article-input" type="text" placeholder="Entrez le nom d'une nouvelle catégorie" name="new_category"></div>
+					<div style="display:flex;"><i class="fas fa-plus plus-icon"></i><input class="create-article-input" type="text" placeholder="Entrez le nom d'une nouvelle catégorie" name="new_category" autocomplete="off"></div>
 					
 					<div class="create-article-line-spacer"></div>
 					
@@ -55,7 +55,7 @@
 						<div class="create-article-page-delete"><i class="far fa-trash-alt"></i> Supprimer la page</div>
 				
 						<div style="display:flex;"><label class="create-article-label">Titre de la page</label><span class="create-article-sticker">Champ facultatif</span></div>
-						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page">
+						<input class="create-article-input" type="text" placeholder="Entrez un titre pour cette page" autocomplete="off">
 						
 						<textarea rows="4" cols="50" class="create-article-text-area" name="page_content[]"></textarea>
 						

@@ -35,7 +35,7 @@ function browse_article()
 			$style = create_picture($metadata['id']);
 			
 			//Category
-			$req3 = $pdo->prepare('SELECT name FROM category WHERE id = ?');
+			$req3 = $pdo->prepare('SELECT name FROM categories WHERE id = ?');
 			$req3->execute([$metadata['id_category']]);
 			$category = $req3->fetch();
 

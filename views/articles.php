@@ -6,6 +6,7 @@
 		require '../layout/assets.php';
 		require_once '../server/db.php';
 		require '../server/functions_article.php';
+		require_once '../server/session.php';
 		check_geter_article();
 		$id_article = $_GET['article']; $page = $_GET['page']; 
 	?>
