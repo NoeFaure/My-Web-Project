@@ -36,9 +36,12 @@
 					<div style="display:flex;"><label class="create-article-label">Sous-titre (phrase d'accroche)</label><span class="create-article-sticker">Champ obligatoire</span></div>
 					<input class="create-article-input" type="text" name="under_title" placeholder="Entrez un sous-titre" autocomplete="off">
 					
-					<div style="display:flex;"><label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; Télécharger l'image de couverture de l'article</label><span class="create-article-upload-info">Max : 8Mo (.jpg)</span></div>
-					<input type="hidden" name="MAX_FILE_SIZE" value="8388608"/>
-					<input id="file" class="create-article-upload" name="picture" type="file"><br>
+					<div style="display:flex;">
+						<input type="hidden" name="MAX_FILE_SIZE" value="8388608"/>
+						<input id="file" class="create-article-upload" name="picture" type="file">
+						<label for="file" class="create-article-label-file"><i class="fas fa-file-download"></i> &nbsp; <span>Télécharger l'image de couverture de l'article</span></label>
+						<span class="create-article-upload-info">Max : 8Mo (.jpg)</span>
+					</div>
 					
 					<div style="display:flex;"><label class="create-article-label">Sélectionner une catégorie</label><span class="create-article-sticker">Remplissez un des deux champs</span></div>
 					<select class="create-article-select" name="category">

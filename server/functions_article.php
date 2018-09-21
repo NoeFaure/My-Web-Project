@@ -101,7 +101,7 @@ function get_publication_date($id_article)
 		$mounth_number = $u_date[7];
 	}
 	
-	$mounth = $mounth_list[$mounth_number];
+	$mounth = $mounth_list[$mounth_number -1];
 	
 	echo($day . " " . $mounth . " " . $year);
 	

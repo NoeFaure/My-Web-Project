@@ -83,7 +83,7 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 	
 	if (empty($errors))
 	{
-		$today = '2018-09-13';        
+		$today = date("Y-m-d");        
 		
 		// Create article
 		$req = $pdo->prepare('INSERT INTO articles (title, under_title, id_author, publication_date, id_category) VALUES (?,?,?,?,?)');
@@ -105,6 +105,10 @@ if (!empty($_POST['title']) && !empty($_POST['under_title']) && (!empty($_POST['
 		$index_page = 0;
 		foreach($_POST['page_title'] as $page_content)
 		{
+			//Manage skip lines
+			$char_to_replace = array("\n");
+			$_POST['page_content'][$index_page] = str_replace($char_to_replace, "<br>", $_POST['page_content'][$index_page]);
+			
 			$req = $pdo->prepare('INSERT INTO pages (id_article, title, content, page_number) VALUES (?,?,?,?)');
 			$req->execute([$id_article[0], $_POST['page_title'][$index_page], $_POST['page_content'][$index_page], $index_page + 1]);
 			

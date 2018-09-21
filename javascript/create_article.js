@@ -32,8 +32,35 @@ $(document).ready(function(){
 		
 		new_page.insertAfter($(this).closest('.create-article-create-page-container')).fadeIn();
 		ReIndex();
+		//new_page.children().val('');
 		
   });
 	
+	// Delete page
 	$('body').on('click','.create-article-page-delete',DeletePage);
+	
+	// Change label on upload
+	var inputs = document.querySelectorAll( '.create-article-upload' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+			{
+				label.querySelector( 'span' ).innerHTML = fileName;
+			}
+			else
+			{
+				label.innerHTML = labelVal;
+			}
+		});
+	});
+	
+	
 });

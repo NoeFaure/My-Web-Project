@@ -41,7 +41,8 @@ function browse_article()
 
 			$extract_page[0] = substr ($extract_page[0], 0, 700);
 
-			echo '<a class="article-clickable" href="articles.php?article='. $metadata['id'] .'&page=1"><div class="article-container">
+			echo '<div class="article-header"></div>
+			<a class="article-clickable" href="articles.php?article='. $metadata['id'] .'&page=1"><div class="article-container">
 							<div class="article-category">' . $category[0] .'</div>
 								<div class="article-picture" '. $style.'></div>
 									<div class="article-info-container">
