@@ -54,6 +54,10 @@ $(document).ready(function(){
 			if( fileName )
 			{
 				label.querySelector( 'span' ).innerHTML = fileName;
+				// Change color of label
+				$(label).css("border", "1px solid #6eb5ec");
+				$(label).css("color", "white");
+				$(label).css("background-color", "#92ccff");
 			}
 			else
 			{
