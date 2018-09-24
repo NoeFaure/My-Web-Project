@@ -50,7 +50,12 @@
 			
 			<div class="step-title"><?php get_page_title($id_article, $page); ?></div>
 			
-			<ul class="all-under-titles"><?php get_all_under_titles($id_article); ?></ul>
+			<div class="all-under-titles" style="display:none;">
+				<div class="under-titles-list-label">Plan de l'article</div>
+				<ul class="all-under-titles-list">
+					<?php get_all_under_titles($id_article); ?>
+				</ul>
+			</div>
 			
 			<div class="article-content"><?php get_page_content($id_article, $page); ?></div>
 			

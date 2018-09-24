@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$(".under_title_list_click").click(function(){
     if(is_under_titles_show == false)
 			{
-				$(".all-under-titles").css("display","block");
+				$(".all-under-titles").fadeIn("slow");
 				$(".article-content").css("display","none");
 				$(".step-title").css("display","none");
 				is_under_titles_show = true;
@@ -35,8 +35,8 @@ $(document).ready(function(){
 		else
 			{
 				$(".all-under-titles").css("display","none");
-				$(".article-content").css("display","block");
-				$(".step-title").css("display","block");
+				$(".article-content").fadeIn("slow");
+				$(".step-title").fadeIn("slow");
 				is_under_titles_show = false;
 			}
 	});
