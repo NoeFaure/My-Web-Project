@@ -44,11 +44,13 @@
 			<ul class="option-article">
 				<li class="publication-date">Publié le : <?php get_publication_date($id_article); ?></li>
 				<li class="option-article-icons"><i class="fas fa-plus"></i></li>
-				<li class="option-article-icons"><i class="fas fa-clipboard-list"></i></li>
+				<li class="option-article-icons under_title_list_click" type="button"><i class="fas fa-clipboard-list"></i></li>
 				<li class="option-article-icons"><i class="far fa-heart rose"></i></li>
 			</ul>
 			
 			<div class="step-title"><?php get_page_title($id_article, $page); ?></div>
+			
+			<ul class="all-under-titles"><?php get_all_under_titles($id_article); ?></ul>
 			
 			<div class="article-content"><?php get_page_content($id_article, $page); ?></div>
 			

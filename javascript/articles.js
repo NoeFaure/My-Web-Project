@@ -17,3 +17,28 @@ function switch_page()
 window.onload = function() {
 	switch_page();
 };
+
+//jQuery
+$(document).ready(function(){
+	
+	// Display under titles list
+	var is_under_titles_show = false;
+	
+	$(".under_title_list_click").click(function(){
+    if(is_under_titles_show == false)
+			{
+				$(".all-under-titles").css("display","block");
+				$(".article-content").css("display","none");
+				$(".step-title").css("display","none");
+				is_under_titles_show = true;
+			}
+		else
+			{
+				$(".all-under-titles").css("display","none");
+				$(".article-content").css("display","block");
+				$(".step-title").css("display","block");
+				is_under_titles_show = false;
+			}
+	});
+	
+});

@@ -229,3 +229,22 @@ function print_picture($id)
 {
 	echo("style=\"background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/". $id .".jpg);\"");
 }
+
+function get_all_under_titles($id_article)
+{
+	global $pdo;
+	
+	//Bring all under_title
+	$req = $pdo->prepare('SELECT title FROM pages WHERE id_article = ?');
+	$req->execute([$id_article]);
+	$under_titles = $req->fetchAll();
+	
+	//page number
+	$page = 1;
+	
+	foreach($under_titles as $under_title)
+	{
+		echo('<a href="?article='.$id_article.'&page='.$page.'"><li>'. $under_title[0] .'</li></a>');
+		$page = $page + 1;
+	}
+}
